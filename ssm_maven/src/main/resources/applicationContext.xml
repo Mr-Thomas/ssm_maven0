@@ -19,6 +19,8 @@
 
     <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="comboPooledDataSource"></property>
+        <!--读取mybatis核心配置文件  -->
+        <property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
     </bean>
 
     <bean id="comboPooledDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
@@ -28,6 +30,7 @@
         <property name="password" value="123"></property>
     </bean>
 
+    <!--扫描该包 生成代理对象 并 放入spring容器中-->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
         <property name="basePackage" value="com.itheima.dao"></property>
     </bean>

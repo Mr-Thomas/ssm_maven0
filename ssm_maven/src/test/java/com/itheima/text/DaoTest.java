@@ -17,5 +17,9 @@ public class DaoTest {
         for (Account account : accounts) {
             System.out.println(account);
         }
+        System.out.println("=============");
+
+        Account one = dao.findOne("李四");
+        System.out.println(one);
     }
 }

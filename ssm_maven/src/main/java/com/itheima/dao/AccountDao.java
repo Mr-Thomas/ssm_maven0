@@ -8,4 +8,6 @@ import java.util.List;
 public interface AccountDao {
     @Select("select * from account")
     List<Account> findAll();
+
+    Account findOne(String userName);
 }

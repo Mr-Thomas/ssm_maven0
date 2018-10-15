@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.itheima.dao.AccountDao">
+
+    <resultMap id="accountMap" type="account"></resultMap>
+
+    <select id="findOne" parameterType="String" resultMap="accountMap">
+        select * from account where name = #{uname}
+    </select>
+
+</mapper>
