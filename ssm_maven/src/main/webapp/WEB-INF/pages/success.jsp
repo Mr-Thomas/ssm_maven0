@@ -12,5 +12,8 @@
 </head>
 <body>
 <h3>测试方法</h3>
+
+${one.name}
+${one.money}
 </body>
 </html>

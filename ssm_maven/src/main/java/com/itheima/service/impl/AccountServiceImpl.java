@@ -17,4 +17,8 @@ public class AccountServiceImpl implements AccountService {
         System.out.println("业务层:findAll执行...");
         return dao.findAll();
     }
+
+    public Account findOne(String userName) {
+        return dao.findOne(userName);
+    }
 }

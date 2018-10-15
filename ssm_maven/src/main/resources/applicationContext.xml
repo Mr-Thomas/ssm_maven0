@@ -19,6 +19,7 @@
 
     <bean id="SqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="comboPooledDataSource"></property>
+
         <!--读取mybatis核心配置文件  -->
         <property name="configLocation" value="classpath:sqlMapConfig.xml"></property>
     </bean>
